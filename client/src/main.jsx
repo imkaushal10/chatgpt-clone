@@ -11,6 +11,7 @@ import SignInPage from "./routes/signInPage/signInPage";
 import SignUpPage from "./routes/signUpPage/signUpPage";
 import RootLayout from "./layouts/rootLayout/RootLayout";
 
+
 const router = createBrowserRouter([
   {
     element: <RootLayout />,
