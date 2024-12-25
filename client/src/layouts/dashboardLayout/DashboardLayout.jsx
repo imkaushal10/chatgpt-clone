@@ -1,21 +1,22 @@
 import { Outlet, useNavigate } from "react-router-dom";
 import "./dashboardLayout.css";
-// import { useAuth } from "@clerk/clerk-react";
+import { useAuth } from "@clerk/clerk-react";
 import { useEffect } from "react";
 // import ChatList from "../../components/chatList/ChatList";
 
 const DashboardLayout = () => {
-//   const { userId, isLoaded } = useAuth();
+  // Using auth hook to get user id
+  const { userId, isLoaded } = useAuth();
 
-//   const navigate = useNavigate();
+  const navigate = useNavigate();   // navigation hook to direct pages
 
-//   useEffect(() => {
-//     if (isLoaded && !userId) {
-//       navigate("/sign-in");
-//     }
-//   }, [isLoaded, userId, navigate]);
+  useEffect(() => {
+    if (isLoaded && !userId) {
+      navigate("/sign-in");
+    }
+  }, [isLoaded, userId, navigate]);
 
-//   if (!isLoaded) return "Loading...";
+  if (!isLoaded) return "Loading...";
 
   return (
     <div className="dashboardLayout">

@@ -18,9 +18,9 @@ const RootLayout = () => {
               <img src="/logo_kai.png" alt="" />
             </Link>
             <div className="user">
-              <SignedOut>
+              {/* <SignedOut>
                 <SignInButton />
-              </SignedOut>
+              </SignedOut> */}
               <SignedIn>
                 <UserButton />
               </SignedIn>
