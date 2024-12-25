@@ -2,8 +2,7 @@ import { Outlet, useNavigate } from "react-router-dom";
 import "./dashboardLayout.css";
 import { useAuth } from "@clerk/clerk-react";
 import { useEffect } from "react";
-import ChatList from "../../components/ChatList";
-// import ChatList from "../../components/chatList/ChatList";
+import ChatList from "../../components/chatList/ChatList";
 
 const DashboardLayout = () => {
   // Using auth hook to get user id

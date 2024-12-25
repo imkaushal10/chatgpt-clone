@@ -19,7 +19,7 @@ const ChatList = () => {
       <Link to="/">Contact</Link>
       <hr />
       <span className="title">RECENT CHATS</span>
-      <div className="list">
+
         {/* {isPending
           ? "Loading..."
           : error
@@ -29,7 +29,7 @@ const ChatList = () => {
                 {chat.title}
               </Link>
             ))} */}
-      </div>
+      
       <hr />
       <div className="upgrade">
         <img src="/logo_kai.png" alt="" />
