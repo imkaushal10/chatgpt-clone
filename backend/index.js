@@ -1,11 +1,19 @@
 import express from "express"
 import ImageKit from "imagekit";
 import dotenv from "dotenv";
+import cors from "cors";
 
 dotenv.config();
 
 const port = process.env.PORT || 3000;
 const app = express();    //creating our app
+
+app.use(
+  cors({
+    origin: process.env.CLIENT_URL,
+    // credentials: true,
+  })
+);
 
 //initializing imagekit
 const imagekit = new ImageKit({
